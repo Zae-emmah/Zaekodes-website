@@ -805,9 +805,9 @@ body {
    ============================== */
 
 #scroll-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
+position: fixed; 
+bottom: 30px;
+ right: 30px;
 
   width: 48px;
   height: 48px;
@@ -855,7 +855,7 @@ body {
    ============================== */
 
 .footer-section {
-  background-color: #0E163D;
+  background-color: #0d000f;
   color: #D6C9E3;
   font-size: 0.9rem;
   text-align: center;
@@ -1529,15 +1529,14 @@ body {
 /* =========================
    FLOATING ACTIONS
 ========================= */
-.floating-actions {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 9999;
-}
+.floating-actions { position: fixed;
+   bottom: 30px; 
+   right: 30px;
+    display: flex; 
+    flex-direction: column;
+     gap: 12px;
+      z-index: 9999; }
+
 
 /* Scroll & Chat buttons */
 #scroll-to-top,
@@ -1559,18 +1558,17 @@ body {
 /* =========================
    CHAT BOX
 ========================= */
-.chat-box {
-  position: fixed;
-  bottom: 30px;
+.chat-box { position: fixed; 
+  bottom: 30px; 
   right: 90px;
-  width: 320px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  display: none;
-  flex-direction: column;
-  z-index: 9999;
-}
+   width: 320px;
+    background: #ffffff;
+     border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+       display: none; 
+       flex-direction: column;
+        z-index: 9999; }
+
 
 /* Chat header */
 .chat-header {
@@ -2727,4 +2725,42 @@ body {
   font-size: 14px;
   color: #8B5FBF;
   font-weight: 500;
+}
+
+
+
+
+
+
+
+
+/* =========================
+   MOBILE ONLY FIX
+========================= */
+@media (max-width: 600px) {
+
+  /* Stack buttons cleanly */
+  .floating-actions {
+    bottom: 20px;
+    right: 16px;
+    gap: 16px;
+  }
+
+  /* Ensure chat toggle is ABOVE scroll arrow */
+  #chat-toggle {
+    order: 2;
+  }
+
+  #scroll-to-top {
+    order: 1;
+  }
+
+  /* Move chat box ABOVE both buttons */
+  .chat-box {
+    right: 16px;
+    bottom: 130px;
+    width: calc(100vw - 32px);
+    max-width: 360px;
+  }
+
 }
