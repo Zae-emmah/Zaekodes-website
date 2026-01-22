@@ -2118,9 +2118,7 @@ bottom: 30px;
 }
 
 @media (max-width: 600px) {
-  .video-bg {
-    display: none;
-  }
+  
 
   .video-hero {
     background: linear-gradient(135deg, #2b1b3d, #8B5FBF);
