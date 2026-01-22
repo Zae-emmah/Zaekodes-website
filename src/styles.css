@@ -2730,37 +2730,45 @@ bottom: 30px;
 
 
 
-
-
-
-
 /* =========================
-   MOBILE ONLY FIX
+   MOBILE OVERRIDE — FORCE FIX
 ========================= */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
-  /* Stack buttons cleanly */
+  /* FORCE floating container reset */
   .floating-actions {
-    bottom: 20px;
-    right: 16px;
-    gap: 16px;
+    position: fixed !important;
+    bottom: auto !important;
+    right: auto !important;
+    inset: auto !important;
   }
 
-  /* Ensure chat toggle is ABOVE scroll arrow */
-  #chat-toggle {
-    order: 2;
-  }
-
+  /* Scroll to top — lowest */
   #scroll-to-top {
-    order: 1;
+    position: fixed !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    z-index: 900 !important;
   }
 
-  /* Move chat box ABOVE both buttons */
+  /* Chat toggle — ABOVE scroll */
+  #chat-toggle {
+    position: fixed !important;
+    bottom: 76px !important;
+    right: 16px !important;
+    z-index: 950 !important;
+  }
+
+  /* Chat box — ABOVE BOTH */
   .chat-box {
-    right: 16px;
-    bottom: 130px;
-    width: calc(100vw - 32px);
-    max-width: 360px;
-  }
+    position: fixed !important;
+    bottom: 140px !important;
+    right: 12px !important;
 
+    width: calc(100% - 24px) !important;
+    max-width: 360px !important;
+
+    z-index: 1000 !important;
+  }
 }
+
