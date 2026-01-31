@@ -190,7 +190,7 @@ function handleUserMessage() {
   }
 
   // 💰 Pricing / quotation detection (UNCHANGED)
-  if (/price|pricing|cost|quote|quotation|budget/i.test(text)) {
+  if (/price|pricing|cost|quote|quotation|budget|how much|charge/i.test(text)) {
     addBotMessage(
       "Your request has been sent to our admin. They will respond to you soon. For a quicker response, call or WhatsApp us on +263777338613."
     );
