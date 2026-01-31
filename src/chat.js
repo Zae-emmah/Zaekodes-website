@@ -169,7 +169,7 @@ function handleUserMessage() {
   // ❌ BLOCK NON-ZAEKODES QUESTIONS (ADDED)
   if (!isZaeKodesRelated(text) && !isProcessQuestion(text)) {
     addBotMessage(
-      "I can assist with ZaeKodes services including digital solutions, development and policy support, and strategic communication. Please let me know how I can help within these areas."
+      "Oops, that’s not something I handle 😅. Let’s talk about ZaeKodes services instead!"
     );
     return;
   }
