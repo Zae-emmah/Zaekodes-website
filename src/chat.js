@@ -192,7 +192,7 @@ function handleUserMessage() {
   // 💰 Pricing / quotation detection (UNCHANGED)
   if (/price|pricing|cost|quote|quotation|budget/i.test(text)) {
     addBotMessage(
-      "Thank you. Your request has been sent to the admin. You will receive a response via the email you provided."
+      "Your request has been sent to our admin. They will respond to you soon. For a quicker response, call or WhatsApp us on +263777338613."
     );
     return;
   }
